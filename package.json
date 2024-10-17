@@ -1,0 +1,65 @@
+{
+  "name": "slscriptsn",
+  "displayName": "天使脚本补全插件",
+  "description": "提供天使脚本的代码片段、语法高亮和自动补全。", 
+  "version": "0.0.2",
+  "publisher": "sabason-qq-19699100",
+  "engines": {
+    "vscode": "^1.94.0" 
+  },
+  "categories": [
+    "Programming Languages", 
+    "Snippets"
+  ],
+  "activationEvents": [
+    "onLanguage:sl" 
+  ],
+  "main": "./out/extension.js", 
+  "contributes": {
+    "languages": [
+      {
+        "id": "sl",
+        "aliases": ["SL Script", "sl"],
+        "extensions": [".sl"],
+        "configuration": "./language-configuration.json"
+      }
+    ],
+    "grammars": [
+      {
+        "language": "sl",
+        "scopeName": "source.sl",
+        "path": "./syntaxes/sl.tmLanguage.json"
+      }
+    ],
+    "snippets": [
+      {
+        "language": "sl",
+        "path": "./snippets/snippets.code-snippets"
+      }
+    ]
+  },
+ "devDependencies": {
+    "typescript": "^5.0.0",
+    "@types/vscode": "^1.94.0",
+    "@types/node": "^20.8.7",
+    "webpack": "^5.88.2", 
+    "ts-loader": "^9.5.0",
+    "eslint": "^8.0.1",
+    "@typescript-eslint/eslint-plugin": "^6.0.0",
+    "@typescript-eslint/parser": "^6.0.0"
+  },  
+
+  "scripts": {
+    "esbuild": "esbuild src/extension.ts --bundle --outfile=out/extension.js --platform=node --external:vscode --format=cjs --sourcemap",
+     "build": "webpack",
+    "compile": "tsc -p ./",
+    "watch": "tsc -watch -p ./",
+    "pretest": "npm run compile && npm run lint",
+    "lint": "eslint src --ext ts",
+    "test": "node ./out/test/runTest.js"
+  },
+ "repository": {
+   "type": "git",
+    "url": "https://github.com/your-username/your-repo.git"
+  }
+}
