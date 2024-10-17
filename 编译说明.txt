@@ -1,0 +1,11 @@
+
+npm install
+npm run compile
+
+本地打包
+   安装：npm i vsce -g
+   打包成vsix文件: vsce package
+      
+
+安装好插件后
+   打开天使脚本文件如 201.nes.sl就可以编译天使脚本了

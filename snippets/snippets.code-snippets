@@ -1,0 +1,82 @@
+{
+    "New Line": {
+        "prefix": "nl",
+        "body": "\n",
+        "description": "插入空行"
+    },
+    "Comment": {
+        "prefix": "cmt",
+        "body": "// $0",
+        "description": "添加行注释"
+    },
+    "If Condition": {
+        "prefix": "if",
+        "body": [
+            "IfCondition(${1:condition})",
+            "Then",
+            "\t$0",
+            "EndIf"
+        ],
+        "description": "If 语句"
+    },
+    "If-Else Condition": {
+        "prefix": "ife",
+        "body": [
+            "IfCondition(${1:condition})",
+            "Then",
+            "\t$2",
+            "Else",
+            "\t$3",
+            "EndElse",
+            "EndIf"
+        ],
+        "description": "If-Else 语句"
+    },
+    "Set Variable": {
+        "prefix": "set",
+        "body": "Set(${1:variable}, ${2:value})",
+        "description": "设置变量"
+    },
+    "Calculate": {
+        "prefix": "calc",
+        "body": "Calc(${1:result}, ${2:operand1}, ${3:operator}, ${4:operand2})",
+        "description": "执行计算"
+    },
+    "Function Call": {
+      "prefix": "call",
+      "body": "Call(${1:functionId})",
+      "description": "调用函数"
+    },
+
+    // Add more snippets for your other commands here...
+    "Get Player Level": {
+        "prefix": "gpl",
+        "body": "SlEvCmdCodePlayerGetLevel()",
+        "description": "获取玩家等级"
+    },
+    "Add Player Experience": {
+      "prefix": "apex",
+      "body": "SlEvCmdCodePlayerAddExp(${1:amount})",
+      "description": "增加玩家经验值"
+    },
+
+    // ... and so on for other commands
+    "Goto Label": {
+        "prefix": "gtl",
+        "body": "GotoLabel(${1:labelName})",
+        "description": "定义 Goto 标签"
+    },
+    "Goto": {
+      "prefix": "gt",
+      "body": "Goto(${1:labelName})",
+      "description": "跳转到标签"
+    },
+
+    "Randomize": {
+        "prefix": "rnd",
+        "body": "Randomize(${1:max})",
+        "description": "生成一个随机数"
+    }
+
+
+}
