@@ -1,8 +1,8 @@
 {
   "name": "slscriptsn",
   "displayName": "天使脚本补全插件",
-  "description": "提供天使脚本的代码片段、语法高亮和自动补全。", 
-  "version": "0.0.2",
+  "description": "提供天使脚本的代码片段、语法高亮和自动补全", 
+  "version": "0.0.4",
   "publisher": "sabason-qq-19699100",
   "engines": {
     "vscode": "^1.94.0" 

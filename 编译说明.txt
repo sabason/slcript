@@ -1,11 +1,18 @@
+从git下面回来后，需要安装node_modules也就是依赖库  
+  npm install
 
-npm install
-npm run compile
+首先进入  插件所在的目录   如 "E:\天使\天使在线\工具\天使脚本生成器1.22\vscode插件\slscriptsn"
+打包方法：
+1、执行npm install vsce -g --save vsce，安装vsce命令。只需要运行一次，安装过后以后不用再安装了
+2、修改工程中的错误，有任何错误都不能完成打包(将Blob类型改成any)。
+3、删除node_modules文件夹，执行npm install
+4、执行npm run compile  来编译插件
+5、执行vsce package   打包成vsix文件，每次打包时就运行一次
 
-本地打包
-   安装：npm i vsce -g
-   打包成vsix文件: vsce package
-      
+调试方法
+   1、执行npm run compile  来编译插件
+   2、按F5运行插件
+
 
 安装好插件后
    打开天使脚本文件如 201.nes.sl就可以编译天使脚本了
